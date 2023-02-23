@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --roboto: "Roboto", sans-serif;
+  --bg-color: #1d294a;
+  --color-white: #fff;
+  --color-green: #2b95a2;
+  --color-green-light: #e3f7ea;
+  --color-red: #ff0000;
+}
+
+body {
+  font-family: var(--roboto);
+}
+
+.container {
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__title {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.container__subtitle {
+  color: var(--color-green);
+}
+
+.container__form {
+  margin-top: 2rem;
+}
+
+.formulario {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formulario__input {
+  width: 300px;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  border: 2px solid var(--bg-color);
+  outline: none;
+  font-size: 1rem;
+}
+
+.formulario__input:focus {
+  border-color: var(--color-white);
+}
+
+.formulario__button {
+  padding: 0.65rem 1.5rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: #2b95a2;
+  border: 0.125rem solid var(--color-green);
+}
+
+.formulario__button:hover {
+  cursor: pointer;
+}
+
+.main,
+.main__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main {
+  margin-top: 2rem;
+}
+
+.main__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main__city {
+  font-weight: 700;
+  color: var(--color-white);
+  font-size: 2.5rem;
+}
+
+.main__country {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-green-light);
+}
+
+.main__section {
+  display: flex;
+  align-items: center;
+}
+
+.main__img {
+  width: 6.25rem;
+}
+
+.main__temp {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.main__maps {
+  margin-top: 2rem;
+  width: 400px;
+  height: 300px;
+  border-radius: 0.625rem;
+}
+
+.formulario__error {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.625rem;
+}
+
+.error__api {
+  width: 300px;
+  margin-top: 1rem;
+  background-color: var(--color-red);
+  padding: 0.6rem;
+  color: var(--color-white);
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0.625rem;
+}
+
+@media (max-width: 505px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .formulario {
+    flex-direction: column;
+  }
+
+  .formulario__button {
+    width: 300px;
+  }
+
+  .main__maps {
+    width: 360px;
+  }
+}
